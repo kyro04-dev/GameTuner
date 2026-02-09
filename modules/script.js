@@ -1,41 +1,24 @@
-const jsonUrl = "modules.json"; 
-// atau guna raw github URL
-
-fetch(jsonUrl)
-  .then(res => res.json())
+fetch("modules.json")
+  .then(r => r.json())
   .then(data => {
     const list = document.getElementById("module-list");
 
     data.forEach(m => {
-      const div = document.createElement("div");
-      div.className = "module";
+      const item = document.createElement("div");
+      item.className = "module-card";
+      item.onclick = () => {
+        location.href = `module.html?id=${m.id}`;
+      };
 
-      div.innerHTML = `
-        <img src="${m.image_url}" alt="${m.name}">
-        <div class="info">
+      item.innerHTML = `
+        <img src="${m.image_url}">
+        <div>
           <h2>${m.name}</h2>
-          <p>${m.description}</p>
-          <p>
-            Version: ${m.version} |
-            SDK ≥ ${m.min_sdk} |
-            Size: ${m.size_module}
-          </p>
-          <span class="badge">${m.action_type.toUpperCase()}</span><br>
-
-          <button class="${m.action_type}"
-            onclick="downloadModule('${m.url_file}', '${m.action_type}')">
-            ${m.action_type === "direct" ? "Download" : "Select & Download"}
-          </button>
+          <span class="badge">${m.action_type.toUpperCase()}</span>
+          <p>Version ${m.version} • SDK ≥ ${m.min_sdk}</p>
         </div>
       `;
 
-      list.appendChild(div);
+      list.appendChild(item);
     });
   });
-
-function downloadModule(url, type) {
-  if (type === "select") {
-    alert("Module ini perlu pilihan action dalam aplikasi.");
-  }
-  window.open(url, "_blank");
-}
