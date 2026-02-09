@@ -6,7 +6,7 @@
     "author": "Kyro",
     "min_sdk": 26,
     "action_type": "direct",
-    "description": "Optimize FPS, reduce lag dan stabilize frame rate untuk game berat.",
+    "description": "Optimize FPS, reduce lag dan stabilkan frame rate untuk game berat dan kompetitif.",
     "image_url": "https://raw.githubusercontent.com/USERNAME/REPO/main/images/fps.png",
     "size_module": "2.4 MB",
     "url_file": "https://raw.githubusercontent.com/USERNAME/REPO/main/modules/fps_booster.zip"
