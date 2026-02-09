@@ -1,24 +1,14 @@
 [
   {
+    "id": "fps_booster",
     "name": "FPS Booster Extreme",
     "version": "1.2",
     "author": "Kyro",
     "min_sdk": 26,
     "action_type": "direct",
-    "description": "Optimize FPS & reduce lag untuk game berat.",
+    "description": "Optimize FPS, reduce lag dan stabilize frame rate untuk game berat.",
     "image_url": "https://raw.githubusercontent.com/USERNAME/REPO/main/images/fps.png",
     "size_module": "2.4 MB",
     "url_file": "https://raw.githubusercontent.com/USERNAME/REPO/main/modules/fps_booster.zip"
-  },
-  {
-    "name": "Graphics Unlocker",
-    "version": "1.0",
-    "author": "Kyro",
-    "min_sdk": 28,
-    "action_type": "select",
-    "description": "Unlock ultra graphics untuk device tertentu.",
-    "image_url": "https://raw.githubusercontent.com/USERNAME/REPO/main/images/graphic.png",
-    "size_module": "1.8 MB",
-    "url_file": "https://raw.githubusercontent.com/USERNAME/REPO/main/modules/graphics_unlocker.zip"
   }
 ]
