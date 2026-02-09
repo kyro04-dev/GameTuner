@@ -1,56 +1,65 @@
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: system-ui;
   background: #0d1117;
-  color: #fff;
-  padding: 20px;
+  color: white;
+  padding: 15px;
 }
 
 h1 {
   text-align: center;
 }
 
-.module {
-  background: #161b22;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 15px;
+.module-card {
   display: flex;
-  gap: 15px;
+  gap: 12px;
+  background: #161b22;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
 }
 
-.module img {
-  width: 90px;
-  height: 90px;
+.module-card img {
+  width: 70px;
+  height: 70px;
   border-radius: 8px;
-  object-fit: cover;
-}
-
-.info {
-  flex: 1;
-}
-
-.info h2 {
-  margin: 0;
 }
 
 .badge {
-  display: inline-block;
-  background: #238636;
+  background: #1f6feb;
   padding: 2px 8px;
   border-radius: 5px;
   font-size: 12px;
 }
 
-button {
-  margin-top: 10px;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  background: #1f6feb;
-  color: white;
-  cursor: pointer;
+.cover {
+  width: 100%;
+  border-radius: 12px;
 }
 
-button.select {
-  background: #f0883e;
+.desc {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.info {
+  list-style: none;
+  padding: 0;
+}
+
+.info li {
+  margin-bottom: 6px;
+}
+
+.download-btn {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  background: #238636;
+  padding: 14px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
