@@ -1,17 +1,15 @@
-const params = new URLSearchParams(location.search);
-const moduleId = params.get("id");
+const id = new URLSearchParams(location.search).get("id");
 
 fetch("modules.json")
-  .then(r => r.json())
+  .then(res => res.json())
   .then(data => {
-    const m = data.find(x => x.id === moduleId);
+    const m = data.find(x => x.id === id);
     if (!m) return;
 
     document.getElementById("module-detail").innerHTML = `
-      <img class="cover" src="${m.image_url}">
-      <h1>${m.name}</h1>
+      <h1 class="detail-title">${m.name}</h1>
 
-      <p class="desc">${m.description}</p>
+      <img class="cover" src="${m.image_url}">
 
       <ul class="info">
         <li><b>Version:</b> ${m.version}</li>
@@ -21,7 +19,9 @@ fetch("modules.json")
         <li><b>Size:</b> ${m.size_module}</li>
       </ul>
 
-      <a href="${m.url_file}" download class="download-btn">
+      <p class="desc">${m.description}</p>
+
+      <a class="download-btn" href="${m.url_file}" download>
         ⬇ Download Module
       </a>
     `;
